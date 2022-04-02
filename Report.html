@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        19MMT_Group2_Wireless Security: WEP,  WPA,  WPA2,  RSN - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p:last-child{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p:last-child,.markdown-body .alert>ul:last-child{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.figma{display:table;position:relative;width:100%;padding-bottom:56.25%}.figma iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:1px solid #eee}.markmap-container{height:300px}.markmap-container>svg{width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-inner comment-enabled" data-hard-breaks="true"><h1 id="19MMT_Group2_Wireless-Security-WEP-WPA-WPA2-RSN" data-id="19MMT_Group2_Wireless-Security-WEP-WPA-WPA2-RSN"><a class="anchor hidden-xs" href="#19MMT_Group2_Wireless-Security-WEP-WPA-WPA2-RSN" title="19MMT_Group2_Wireless-Security-WEP-WPA-WPA2-RSN"><span class="octicon octicon-link"></span></a><span>19MMT_Group2_Wireless Security: WEP,  WPA,  WPA2,  RSN</span></h1><h2 id="GROUP-2" data-id="GROUP-2"><a class="anchor hidden-xs" href="#GROUP-2" title="GROUP-2"><span class="octicon octicon-link"></span></a><span>GROUP 2</span></h2><ul>
+<li><strong><span>Trần Thiên Phúc</span></strong><span> - 19127245</span></li>
+<li><strong><span>Trần Anh Quân</span></strong><span> - 19127251</span></li>
+<li><strong><span>Triệu Nguyễn Minh Huy</span></strong><span> - 19127424</span></li>
+<li><strong><span>Tăng Thanh Quang</span></strong><span> - 19127531</span></li>
+</ul><h2 id="TABLE-OF-CONTENTS" data-id="TABLE-OF-CONTENTS"><a class="anchor hidden-xs" href="#TABLE-OF-CONTENTS" title="TABLE-OF-CONTENTS"><span class="octicon octicon-link"></span></a><span>TABLE OF CONTENTS</span></h2><p><a href="#INTRODUCTION"><span>INTRODUCTION</span></a></p><p><a href="#1-WEP"><span>1. WEP</span></a></p><ul>
+<li><a href="#1.1-History"><span>1.1. History</span></a></li>
+<li><a href="#1.2.-How-it-works?"><span>1.2. How it works?</span></a></li>
+<li><a href="#1.3.-Advantages-and-disadvantages-of-WEP"><span>1.3. Advantages and disadvantages of WEP</span></a></li>
+</ul><p><a href="#2-WPA"><span>2. WPA</span></a></p><ul>
+<li><a href="#2.1.-Introduction"><span>2.1. Introduction</span></a></li>
+<li><a href="#2.2.-WPA-to-the-Rescue!"><span>2.2. WPA to the Rescue!</span></a></li>
+<li><a href="#2.3-TKIP"><span>2.3. TKIP</span></a></li>
+<li><a href="#2.4-Key-Management-in-WPA"><span>2.4. Key Management in WPA</span></a></li>
+<li><a href="#2.5-Summary"><span>2.5. Summary</span></a></li>
+</ul><p><a href="#3-WPA2"><span>3. WPA2</span></a></p><ul>
+<li><a href="#3.1-Introduction"><span>3.1. Introduction</span></a></li>
+<li><a href="#3.2-How-it-works?"><span>3.2. How it works?</span></a></li>
+<li><a href="#3.3-Compare-with-WPA"><span>3.3. Compare with WPA</span></a></li>
+<li><a href="#3.4-Disadvantages-of-WPA2"><span>3.4. Disadvantages of WPA2</span></a></li>
+</ul><p><a href="#4-RSN"><span>4. RSN</span></a></p><ul>
+<li><a href="#4.1-802.11i-Foundation"><span>4.1. 802.11i Foundation</span></a></li>
+<li><a href="#4.2-Robust-Security-Network-definition---RSN"><span>4.2. Robust Security Network definition - RSN</span></a></li>
+<li><a href="#4.3-RSN-security-layers"><span>4.3. RSN security layers</span></a></li>
+</ul><p><a href="#5-SUMMARY"><span>5. SUMMARY</span></a></p><p><a href="#6-REFERENCES"><span>6. REFERENCES</span></a></p><h2 id="INTRODUCTION" data-id="INTRODUCTION"><a class="anchor hidden-xs" href="#INTRODUCTION" title="INTRODUCTION"><span class="octicon octicon-link"></span></a><span>INTRODUCTION</span></h2><p><span>With the strong development of mobile computing devices such as laptops, mobile phones and some other devices, the need for wireless network connection is almost inevitable. Wireless networks bring convenience to users because of their high flexibility, regardless of the network connection, but they can still access the network at any location as long as they have an access point.</span><br>
+<span>However, in the wireless network system, there are great risks from security, vulnerabilities that can allow attackers to break into the system to steal information or perform destructive actions. Therefore, my group decided to choose the topic of </span><strong><span>Wireless Security</span></strong><span>: including </span><strong><span>WEP, WPA, WPA2, RSN</span></strong><span> to learn, research and apply this security solution in a real environment.</span></p><h2 id="1-WEP" data-id="1-WEP"><a class="anchor hidden-xs" href="#1-WEP" title="1-WEP"><span class="octicon octicon-link"></span></a><strong><span>1. WEP</span></strong></h2><h3 id="11-History" data-id="11-History"><a class="anchor hidden-xs" href="#11-History" title="11-History"><span class="octicon octicon-link"></span></a><strong><span>1.1. History</span></strong></h3><p><span>Introduced in 1997, </span><strong><span>Wired Equivalent Privacy</span></strong><span> (WEP) was a security algorithm for 802.11 wireless networks. It was the first attempt at wireless protection. The aim was to add security to wireless networks by encrypting data. If wireless data were intercepted, it would be unrecognizable to the interceptors since it had been encrypted.</span></p><h3 id="12-How-it-works" data-id="12-How-it-works"><a class="anchor hidden-xs" href="#12-How-it-works" title="12-How-it-works"><span class="octicon octicon-link"></span></a><strong><span>1.2. How it works?</span></strong></h3><p><strong><span>1.2.1. Encryption</span></strong><br>
+<span>First WEP performs a 32-bit cyclic redundancy check (CRC) checksum operation on the message. WEP calls this the integrity check value and concatenates it to the end of the plaintext message. Next, we take the secret key and concatenate it to the end of the initialization vector (IV). Plug this IV + secret key combination into the RC4 Pseudo-Random Number Generator (PRNG) and it will output the key stream sequence. The key stream is merely a series of 0s and 1s, equal in length to the plain text message plus CRC combination. Finally, we perform a XOR operation between the plain text message plus CRC combination and the key stream. The result is the cipher text. The IV (unencrypted) is prepended to the cipher text and included as part of the transmitted data.</span></p><p><img src="https://i.imgur.com/elZgSrw.png" alt="" loading="lazy"></p><p><strong><span>1.2.2. Decryption</span></strong><br>
+<span>Decryption is the same process as encryption, but in reverse. We take the IV (which is sent in clear text) and prepend it to the secret key and plug that into the RC4 cipher to regenerate the key stream. Next, we XOR the key stream with the cipher text, which will give us the plain text value. Finally, we reperform the CRC-32 checksum on the message and ensure that it matches the integrity check value in our decrypted plain text. If the checksums do not match, the packet is assumed to have been tampered with and discarded.</span><br>
+<img src="https://i.imgur.com/swqJHkw.png" alt="" loading="lazy"></p><p><strong><span>1.2.3. Authentication</span></strong><br>
+<span>Two methods of authentication can be used with WEP: Open System authentication and Shared Key authentication.</span><br>
+<span>In Open System authentication, the WLAN client does not provide its credentials to the Access Point during authentication. Any client can authenticate with the Access Point and then attempt to associate. In effect, no authentication occurs. Subsequently, WEP keys can be used for encrypting data frames. At this point, the client must have the correct keys.</span><br>
+<span>In Shared Key authentication, the WEP key is used for authentication in a four-step challenge-response handshake:</span></p><ol>
+<li><span>The client sends an authentication request to the Access Point.</span></li>
+<li><span>The Access Point replies with a clear-text challenge.</span></li>
+<li><span>The client encrypts the challenge-text using the configured WEP key and sends it back in another authentication request.</span></li>
+<li><span>The Access Point decrypts the response. If this matches the challenge text, the Access Point sends back a positive reply.</span><br>
+<img src="https://i.imgur.com/yFqrJIz.png" alt="" loading="lazy"></li>
+</ol><h3 id="13-Advantage-and-disadvantage-of-WEP" data-id="13-Advantage-and-disadvantage-of-WEP"><a class="anchor hidden-xs" href="#13-Advantage-and-disadvantage-of-WEP" title="13-Advantage-and-disadvantage-of-WEP"><span class="octicon octicon-link"></span></a><strong><span>1.3. Advantage and disadvantage of WEP</span></strong></h3><p><em><strong><span>Advantage:</span></strong></em></p><ul>
+<li><span>All wireless devices support basic WEP encryption. This can be useful when trying to use older devices that need wireless connectivity.</span></li>
+<li><span>Self-synchronization</span></li>
+<li><span>Computational and resource optimization</span></li>
+</ul><p><em><strong><span>Disadvantage:</span></strong></em></p><ul>
+<li><strong><span>IV Collision</span></strong><span>: When an IV is reused, we call this a collision. When a collision occurs, the combination of the shared secret and the repeated IV results in a key stream that has been used before. Since the IV is sent in clear text, an attacker who keeps track of all the traffic can identify when collisions occur. A number of attacks become possible upon the discovery of IV collisions.</span></li>
+<li><strong><span>Key Management Problems</span></strong><span>: WEP uses a symmetric key encryption mechanism, meaning that the same shared secret (key) is used for both encryption and decryption. The key must be shared between the sender and receiver. Each user must know the key and keep it a secret. What happens if one person leaves the company or has a laptop stolen? A new key must be given to every single user and re-entered in her client configuration. Also, if an attacker compromises the key from one session, the same key can be used to decrypt any other session, because everybody is using the same key.</span></li>
+<li><strong><span>Message Injection</span></strong><span>: Does not guarantee privacy and integrity. If the attackers know the keystream, they can decrypt and change the data.</span></li>
+</ul><h2 id="2-WPA" data-id="2-WPA"><a class="anchor hidden-xs" href="#2-WPA" title="2-WPA"><span class="octicon octicon-link"></span></a><span>2. WPA</span></h2><h3 id="21-Introduction" data-id="21-Introduction"><a class="anchor hidden-xs" href="#21-Introduction" title="21-Introduction"><span class="octicon octicon-link"></span></a><span>2.1. Introduction</span></h3><p><span>No matter how long or secure Wi-Fi’s password is, being easily cracked is a weakness for WEP encryption keys. The IEEE has been hard at work in the 802.11i Task Group to develop a replacement for WEP. Originally called WEP2, the name was changed to WPA, which is, as mentioned earlier, short for </span><strong><span>Wi-Fi Protected Access</span></strong><span>.</span></p><p><span>According to rumors inside the Wi-Fi Alliance, the running joke was:</span></p><blockquote>
+<p><em><span>“After the ship sinks, you don’t name the next one Titanic 2”</span></em></p>
+</blockquote><p><span>On October 31, 2002, the Wi-Fi Alliance announced WPA, in essence a compromise solution because parts of the 802.11i specification were ready (such as 802.1x and Temporal Key Integrity Protocol [TKIP]) and other parts were not (such as Advanced Encryption Standard [AES] and secure deauthentication/disassociation).</span></p><h3 id="22-WPA-to-the-Rescue" data-id="22-WPA-to-the-Rescue"><a class="anchor hidden-xs" href="#22-WPA-to-the-Rescue" title="22-WPA-to-the-Rescue"><span class="octicon octicon-link"></span></a><span>2.2. WPA to the Rescue!</span></h3><p><span>WPA makes major improvements to encryption, authentication, integrity, and key management, and adds an element that defines network security. WPA introduces a new encryption technology, TKIP (Temporal Key Integrity Protocol), with integrity check MIC (Message Integrity Protocol) to replace WEP and provide data reliability and network data integrity.</span></p><p><span>TKIP addresses these weaknesses:</span></p><ul>
+<li><strong><span>Replay attacks</span></strong><span>: IVs can be used out of order.</span></li>
+<li><strong><span>Forgery attacks</span></strong><span>: ICV using 32-bit CRC is linear and can be manipulated.</span></li>
+<li><strong><span>Key collision attacks</span></strong><span>: IV collisions.</span></li>
+<li><strong><span>Weak key attacks</span></strong><span>: RC4 stream cipher is vulnerable to FMS attacks (AirSnort, WEPCrack, dweputils, etc.).</span></li>
+</ul><h3 id="23-TKIP" data-id="23-TKIP"><a class="anchor hidden-xs" href="#23-TKIP" title="23-TKIP"><span class="octicon octicon-link"></span></a><span>2.3. TKIP</span></h3><p><span>TKIP is designed to address the vulnerabilities of WEP, without the need to replace old hardware. For this reason, TKIP maintains the basic mechanisms of WEP: IV, RC4 algorithm, ICV. However, the enhanced RC4 encryption scheme uses one key per 128-bit packet and a longer 48-bit IV. Unlike WEP, TKIP encrypts each data packet sent with its own unique encryption key. These keys are automatically generated, providing greater security against intruders based on predicting static keys in WEP. In addition, WPA includes a MIC (Micheal) message integrity check to prevent message corruption.</span></p><p><span>TKIP has three main elements to enhance encryption:</span></p><ul>
+<li><span>A per-packet key mixing function</span></li>
+<li><span>An improved Message Integrity Code (MIC) function named Michael</span></li>
+<li><span>An enhanced IV including sequencing rules</span></li>
+</ul><h4 id="231-TKIP-in-Detail" data-id="231-TKIP-in-Detail"><a class="anchor hidden-xs" href="#231-TKIP-in-Detail" title="231-TKIP-in-Detail"><span class="octicon octicon-link"></span></a><span>2.3.1. TKIP in Detail</span></h4><p><span>The client starts off with two keys: a 128-bit encryption key and a 64-bit data integrity key obtained securely during the 802.1x negotiation. The encryption key is called the Temporal Key (TK). The integrity key is called the Message Integrity Code (MIC) key. First, the sender’s MAC address is XORed with the TK to create the Phase 1 key (sometimes called the intermediate key). The Phase 1 key is then mixed with a sequence number to produce the Phase 2, per-packet key. The output of Phase 2 is handed over to the WEP engine as a standard 128-bit WEP key (IV + shared secret). The rest of the process occurs as a normal WEP transaction. The difference is that we no longer have all the clients using the same WEP key (because of Phase 1) and we no longer have a correlation between the IV (in this case, the sequence number) and the per-packet key (because of Phase 2). Let’s review each part of TKIP in a bit more detail.</span></p><p><img src="https://i.imgur.com/xwSGSLX.gif" alt="" loading="lazy"><br>
+<em><span>TKIP Encryption</span></em></p><h4 id="232-Per-Packet-Key-Mixing" data-id="232-Per-Packet-Key-Mixing"><a class="anchor hidden-xs" href="#232-Per-Packet-Key-Mixing" title="232-Per-Packet-Key-Mixing"><span class="octicon octicon-link"></span></a><span>2.3.2. Per-Packet Key Mixing</span></h4><p><span>The problem with the original WEP design was that the IV was prepended to the secret key and simply plugged into RC4. Under TKIP, Phase 1 ensures that every client has a different intermediate key. Then, Phase 2 further mixes the key with a sequence number before it is finally plugged into RC4. As you can see, this process is much more involved than simply pre-pending the IV to the secret key and handling it over to RC4. TKIP’s use of a per-packet key fixes WEP’s improper RC4 implementation.</span></p><p><img src="https://i.imgur.com/bYgO8NU.gif" alt="" loading="lazy"><br>
+<em><span>Per-packet key mixing function</span></em></p><h3 id="233-Michael-TKIP’s-MIC-Function" data-id="233-Michael-TKIP’s-MIC-Function"><a class="anchor hidden-xs" href="#233-Michael-TKIP’s-MIC-Function" title="233-Michael-TKIP’s-MIC-Function"><span class="octicon octicon-link"></span></a><span>2.3.3. </span><strong><strong><span>Michael: TKIP’s MIC Function</span></strong></strong></h3><p><span>MIC is a cryptographic message integrity algorithm to prevent any modification to a packet. It uses a hash function instead of a linear checksum, which solves the vulnerabilities in ICV. The hashing algorithm, called Michael, is designed to ensure that the contents of a data packet are sent only by legitimate clients and that there is no data modification during the transmission of the packet. Michael generates a 64-bit hash, which is then compared to both senders/receivers. The MIC value must match the data to be accepted. Otherwise, the packet is ignored because it is assumed that packet integrity has been compromised, unless countermeasures are taken. In this case, all packet transmissions and receptions are disabled and all clients must authenticate and new combinations are stopped within 60 seconds.</span></p><h3 id="234-A-Larger-IV-Space" data-id="234-A-Larger-IV-Space"><a class="anchor hidden-xs" href="#234-A-Larger-IV-Space" title="234-A-Larger-IV-Space"><span class="octicon octicon-link"></span></a><span>2.3.4. </span><strong><strong><span>A Larger IV Space</span></strong></strong></h3><p><span>The 24-bit IV was replaced by a 48-bit TKIP Sequence Counter (TKIP Sequence Counter) to solve the IV reuse problems in WEP. The TSC is a 48-bit counter that starts with 0 and increments by 1 for each packet, providing the receiver with a means of maintaining a trail of the highest value for each MAC address to ensure that the packet arrives on time. Chain. A packet is dropped if the TSC value is less than or equal to the packet just received to prevent re-use attacks because the TSC function allows a key sequence to never be reused with the key. This protocol prevents an attacker from performing a reuse attack, known as known plaintext attacks and dictionary-based attacks, after recovering a key stream.</span></p><h3 id="24-Key-Management-in-WPA" data-id="24-Key-Management-in-WPA"><a class="anchor hidden-xs" href="#24-Key-Management-in-WPA" title="24-Key-Management-in-WPA"><span class="octicon octicon-link"></span></a><span>2.4. Key Management in WPA</span></h3><p><span>The PTK is generated from the PMK using a 4-way handshake and all information used to calculate its value is transmitted in plaintext. So the strength of the PTK is based on the values of the PMK, so that the PSK is effective by using strong passwords. As pointed out by Robert Moskiwitz, the second message of the 4-way handshake must be resistant to dictionary and brute force attacks. To perform this attack the attacker must capture the messages during the 4-way handshake by either passively monitoring the wireless network or using an unauthenticated attack.</span></p><p><img src="https://i.imgur.com/SxPklR8.png" alt="" loading="lazy"><br>
+<em><span>4-way handshake</span></em></p><p><strong><span>Attack steps:</span></strong></p><ul>
+<li><span>Step 1: Enable observation mode.</span></li>
+<li><span>Step 2: Find the network and the clients connected to it.</span></li>
+<li><span>Step 3: Perform a dictionary attack.</span></li>
+</ul><h3 id="25-Summary" data-id="25-Summary"><a class="anchor hidden-xs" href="#25-Summary" title="25-Summary"><span class="octicon octicon-link"></span></a><span>2.5. Summary</span></h3><p><span>WPA was an interim measure, which took some pieces of 802.11i that were ready for prime time, and left other pieces for the 802.11i working group to continue developing. The remaining parts of 802.11i (primarily the AES cipher and ad-hoc security) were not released until more than a year later. The best part of WPA was that it was backwards compatible with existing hardware and could be deployed as a simple software/firmware upgrade. When you think of WPA, you should immediately associate it with </span><strong><span>TKIP and 802.1x</span></strong><span>.</span></p><h2 id="3-WPA2" data-id="3-WPA2"><a class="anchor hidden-xs" href="#3-WPA2" title="3-WPA2"><span class="octicon octicon-link"></span></a><span>3. WPA2</span></h2><h3 id="31-Introduction" data-id="31-Introduction"><a class="anchor hidden-xs" href="#31-Introduction" title="31-Introduction"><span class="octicon octicon-link"></span></a><span>3.1. Introduction</span></h3><p><span>Wi-Fi Alliance introduced WPA and is considered to eliminate all WEP attack vulnerabilities, but users still do not really trust WPA because it still has limitations.</span></p><p><span>To overcome this shortcoming of WPA, a long-term solution is to quickly develop a better security standard, more closely following the IEEE 802.11i standard, which is the WPA2 (Wi-Fi Protected Access 2) standard, which is supported by Wi-Fi Alliance officially replaced WPA in 2006.</span></p><p><img src="https://i.imgur.com/fd09d82.png" alt="" loading="lazy"></p><h3 id="32-How-it-works" data-id="32-How-it-works"><a class="anchor hidden-xs" href="#32-How-it-works" title="32-How-it-works"><span class="octicon octicon-link"></span></a><span>3.2. How it works?</span></h3><p><span>Like WPA, WPA2 is designed for security on all 802.11b, 802.11a, 802.11g and 802.11n versions supporting multi-channel, multi-mode and allowing implementation over IEEE 802.11X/EAP or PSK. It increases data security, controls network access, and overcomes all the weaknesses of WEP and WPA.</span></p><h3 id="33-Compare-with-WPA" data-id="33-Compare-with-WPA"><a class="anchor hidden-xs" href="#33-Compare-with-WPA" title="33-Compare-with-WPA"><span class="octicon octicon-link"></span></a><span>3.3. Compare with WPA</span></h3><p><span>The biggest difference between WPA and WPA2 is that while WPA uses TKIP for encryption and Michael’s algorithm for ensuring the integrity of each data packet, WPA2 uses standard encryption AES (Advanced Encryption Standard) to ensure confidentiality, data integrity and use CCMP (Counter Mode Cipher Block Chaining Message Authentication Code Protocol) for data encryption and packet integrity checking.</span></p><h3 id="34-Disadvantages-of-WPA2" data-id="34-Disadvantages-of-WPA2"><a class="anchor hidden-xs" href="#34-Disadvantages-of-WPA2" title="34-Disadvantages-of-WPA2"><span class="octicon octicon-link"></span></a><span>3.4. Disadvantages of WPA2</span></h3><p><span>However, the WPA2 security protocol can still be compromised. Bad guys can take advantage of this loophole to steal any information that is passed back and forth between the device (phone, computer,…) and the Wi-Fi access point.</span></p><p><span>WPA2 requires hackers to have access to a Wi-Fi network first before they can hack into other clients on the same network. Therefore, WPA2 can be considered as a secure standard for home Wi-Fi networks, and with the above flaw, hackers can only penetrate Wi-Fi networks of businesses (with a lot of connected devices).</span><br>
+<img src="https://i.imgur.com/gZallGO.png" alt="" loading="lazy"><br>
+<span>Hackers only need to be within range of the device to be able to use the </span><strong><span>Key Reinstallation Attack</span></strong><span> (KRACK) method to penetrate the connection between the device and the hotspot. Essentially, KRACK undermines an important aspect of WPA2’s 4-way handshake, allowing hackers to intercept and manipulate the generation of new encryption keys during a secure connection. This approach allows an attacker to read any information that is supposedly encrypted.</span></p><h2 id="4-RSN" data-id="4-RSN"><a class="anchor hidden-xs" href="#4-RSN" title="4-RSN"><span class="octicon octicon-link"></span></a><span>4. RSN</span></h2><h3 id="41-80211i-Foundation" data-id="41-80211i-Foundation"><a class="anchor hidden-xs" href="#41-80211i-Foundation" title="41-80211i-Foundation"><span class="octicon octicon-link"></span></a><span>4.1. 802.11i Foundation</span></h3><p><span>IEEE created a group called Standards Association - SA. IEEE-SA has responsible for creating IEEE 802 standards. These are standards for local area networks and metropolitan networks. EEE 802 is again divided into working groups, where each group is divided into different standards for each area and “.11” is the working group that creates standards for wireless networks.</span><br>
+<img src="https://i.imgur.com/cKCwZIl.png" alt="" loading="lazy"></p><p><span>IEEE 802.11 is a long and complex standard . Regardless of the positive effects of the entire standard, there are sides that are unclear and not fully defined. Some features are still optional. To avoid this problem, a “WiFi” alliance was established. To be “WiFi” certified, a manufacturer must submit their product for testing. The WiFi Alliance offers a test plan based on IEEE 802.11. Some IEEE 802.11 features are not required in the certification, but conversely some features are added. As such, WiFi includes a subset of the 802.11 standard with some extensions.</span></p><p><img src="https://i.imgur.com/n2BRDoq.png" alt="" loading="lazy"></p><p><span>Because the definition of WiFi came when IEEE 802.11 was  completed. However, the WiFi production manufacturers have decided that safety is very important forcing users to replace the use of WEP with a more secure algorithm in the fastest time possible. Furthermore, they also concluded that customers cannot throw away all their old WiFi devices to switch to RSN, they just want to update the product through software. To do this, Task Group I developed a secure solution that builds on the existing functionality of the old product. This thing create TKIP temporal keys integration protocol, and it is allowed as an optional mode in the RSN.</span></p><p><span>The development of TKIP was a big help to enable updating of existing systems, but they couldn’t wait until the standards were accepted. So the WiFi alliance follow a new safety approach based on the “draft RSN” (draft RSN) but specifying the TKIP. This subset of RNs is called WiFi Protected Access (WPA).</span></p><h3 id="42-Robust-Security-Network-definition---RSN" data-id="42-Robust-Security-Network-definition---RSN"><a class="anchor hidden-xs" href="#42-Robust-Security-Network-definition---RSN" title="42-Robust-Security-Network-definition---RSN"><span class="octicon octicon-link"></span></a><span>4.2. Robust Security Network definition - RSN</span></h3><p><span>RSN is an implementation of 802.11i enough to be interoperable with WPA2. 802.11i uses AES block cipher, and WEP and WAP use RC4 stream cipher.</span></p><p><span>Unlike WEP, RSN has many keys in a key architecture and most of them are not known until the authentication process ends. These keys are generated after the authentication process and so they are called temporal keys or session keys. These keys are always updated in real time and they will be deleted when the “safety situation”.</span></p><p><span>Authentication is based on some confidential information that cannot be done automatically. An authentication key must be generated by a trusted source and associated with a user in such a way that it cannot be easily copied or stolen. Such a key is called a master key.</span></p><p><span>RSNs have two types of keys: a permanent key (primary key) for proof of identity and a some of temporal keys used in sessions.</span></p><h3 id="43-RSN-security-layers" data-id="43-RSN-security-layers"><a class="anchor hidden-xs" href="#43-RSN-security-layers" title="43-RSN-security-layers"><span class="octicon octicon-link"></span></a><span>4.3. RSN security layers</span></h3><p><span>There are three security layers of RSN :</span></p><ul>
+<li><span>Wireless LAN layer.</span></li>
+<li><span>Access control layer.</span></li>
+<li><span>Authentication layer.</span></li>
+</ul><p><span>Wireless LAN layer corresponds to the “Data link” layer in the OSI model, which is responsible for encrypting and decrypting data when a “safety situation”.</span></p><p><span>Access control layer is the middle management layer, managing the security context (“safe situation”). It must stop regardless of when data is sent and coming from an “enemy”. Enemy here is understood as someone who does not have an existing security context set up (does not have “safe situation”). It take part in the generation of keys.</span></p><p><span>Authentication layer is the top layer. This layer generates policy decisions and proofs of whether the identity is accepted or rejected. The authentication layer allows anyone who wants to access the LAN and authorizes the access control layer once it accepts someone to connect to the LAN.</span></p><p><img src="https://i.imgur.com/NiKUAed.png" alt="" loading="lazy"></p><h2 id="5-SUMMARY" data-id="5-SUMMARY"><a class="anchor hidden-xs" href="#5-SUMMARY" title="5-SUMMARY"><span class="octicon octicon-link"></span></a><span>5. SUMMARY</span></h2><p><span>Security remains a major concern in WLANs globally. While wireless networks offer convenience and flexibility, they also increase network vulnerability. Security threats like unauthorized access, denial of service attacks, IP and MAC spoofing, session hijacking, and eavesdropping can all be problems for WLANs. To deal with these threats, many standard authentication and encryption techniques are combined with other access control mechanisms.</span></p><p><span>Here are a few ways to protect your Wi-Fi:</span></p><ul>
+<li><span>Changing the default password and SSID.</span></li>
+<li><span>Make sure your password is at least 10 characters long and contains non-alphanumeric characters.</span></li>
+<li><span>Enable the router’s firewall.</span></li>
+<li><span>Enable MAC address filtering.</span></li>
+<li><span>Disable remote administration.</span></li>
+</ul><h2 id="6-REFERENCES" data-id="6-REFERENCES"><a class="anchor hidden-xs" href="#6-REFERENCES" title="6-REFERENCES"><span class="octicon octicon-link"></span></a><span>6. REFERENCES</span></h2><ol>
+<li><span>Barken, L. (2004). How secure is your wireless network?: Safeguarding your wi-fi-lan. Prentice Hall PTR.</span></li>
+<li><span>Nguyễn Hiếu Minh (FIT - MTA). Slide: An ninh mạng không dây (IEEE 802.11)</span></li>
+<li><span>Nguyễn Hoàng Việt. (6.2015). Giải pháp đảm bảo an toàn mạng không dây theo chuẩn 802.11I</span></li>
+<li><span>Wiki IEEE 802.11i-2004</span></li>
+<li><span>An Nhiên. (10.2017). WPA2 là gì? WPA2 đã bị hack như thế nào?</span></li>
+<li><span>Wired Equivalent Privacy - Wikipedia</span></li>
+<li><span>Advantages and Disadvantages of WEP WPA Network Security - Bright Hub</span></li>
+<li><span>Ad-hoc network wiki</span></li>
+</ol></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li><a href="#19MMT_Group2_Wireless-Security-WEP-WPA-WPA2-RSN" title="19MMT_Group2_Wireless Security: WEP,  WPA,  WPA2,  RSN">19MMT_Group2_Wireless Security: WEP,  WPA,  WPA2,  RSN</a><ul class="nav">
+<li><a href="#GROUP-2" title="GROUP 2">GROUP 2</a></li>
+<li><a href="#TABLE-OF-CONTENTS" title="TABLE OF CONTENTS">TABLE OF CONTENTS</a></li>
+<li><a href="#INTRODUCTION" title="INTRODUCTION">INTRODUCTION</a></li>
+<li><a href="#1-WEP" title="1. WEP">1. WEP</a><ul class="nav">
+<li><a href="#11-History" title="1.1. History">1.1. History</a></li>
+<li><a href="#12-How-it-works" title="1.2. How it works?">1.2. How it works?</a></li>
+<li><a href="#13-Advantage-and-disadvantage-of-WEP" title="1.3. Advantage and disadvantage of WEP">1.3. Advantage and disadvantage of WEP</a></li>
+</ul>
+</li>
+<li><a href="#2-WPA" title="2. WPA">2. WPA</a><ul class="nav">
+<li><a href="#21-Introduction" title="2.1. Introduction">2.1. Introduction</a></li>
+<li><a href="#22-WPA-to-the-Rescue" title="2.2. WPA to the Rescue!">2.2. WPA to the Rescue!</a></li>
+<li><a href="#23-TKIP" title="2.3. TKIP">2.3. TKIP</a></li>
+<li><a href="#233-Michael-TKIP’s-MIC-Function" title="2.3.3. Michael: TKIP’s MIC Function">2.3.3. Michael: TKIP’s MIC Function</a></li>
+<li><a href="#234-A-Larger-IV-Space" title="2.3.4. A Larger IV Space">2.3.4. A Larger IV Space</a></li>
+<li><a href="#24-Key-Management-in-WPA" title="2.4. Key Management in WPA">2.4. Key Management in WPA</a></li>
+<li><a href="#25-Summary" title="2.5. Summary">2.5. Summary</a></li>
+</ul>
+</li>
+<li><a href="#3-WPA2" title="3. WPA2">3. WPA2</a><ul class="nav">
+<li><a href="#31-Introduction" title="3.1. Introduction">3.1. Introduction</a></li>
+<li><a href="#32-How-it-works" title="3.2. How it works?">3.2. How it works?</a></li>
+<li><a href="#33-Compare-with-WPA" title="3.3. Compare with WPA">3.3. Compare with WPA</a></li>
+<li><a href="#34-Disadvantages-of-WPA2" title="3.4. Disadvantages of WPA2">3.4. Disadvantages of WPA2</a></li>
+</ul>
+</li>
+<li><a href="#4-RSN" title="4. RSN">4. RSN</a><ul class="nav">
+<li><a href="#41-80211i-Foundation" title="4.1. 802.11i Foundation">4.1. 802.11i Foundation</a></li>
+<li><a href="#42-Robust-Security-Network-definition---RSN" title="4.2. Robust Security Network definition - RSN">4.2. Robust Security Network definition - RSN</a></li>
+<li><a href="#43-RSN-security-layers" title="4.3. RSN security layers">4.3. RSN security layers</a></li>
+</ul>
+</li>
+<li><a href="#5-SUMMARY" title="5. SUMMARY">5. SUMMARY</a></li>
+<li><a href="#6-REFERENCES" title="6. REFERENCES">6. REFERENCES</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li><a href="#19MMT_Group2_Wireless-Security-WEP-WPA-WPA2-RSN" title="19MMT_Group2_Wireless Security: WEP,  WPA,  WPA2,  RSN">19MMT_Group2_Wireless Security: WEP,  WPA,  WPA2,  RSN</a><ul class="nav">
+<li><a href="#GROUP-2" title="GROUP 2">GROUP 2</a></li>
+<li><a href="#TABLE-OF-CONTENTS" title="TABLE OF CONTENTS">TABLE OF CONTENTS</a></li>
+<li><a href="#INTRODUCTION" title="INTRODUCTION">INTRODUCTION</a></li>
+<li><a href="#1-WEP" title="1. WEP">1. WEP</a><ul class="nav">
+<li><a href="#11-History" title="1.1. History">1.1. History</a></li>
+<li><a href="#12-How-it-works" title="1.2. How it works?">1.2. How it works?</a></li>
+<li><a href="#13-Advantage-and-disadvantage-of-WEP" title="1.3. Advantage and disadvantage of WEP">1.3. Advantage and disadvantage of WEP</a></li>
+</ul>
+</li>
+<li><a href="#2-WPA" title="2. WPA">2. WPA</a><ul class="nav">
+<li><a href="#21-Introduction" title="2.1. Introduction">2.1. Introduction</a></li>
+<li><a href="#22-WPA-to-the-Rescue" title="2.2. WPA to the Rescue!">2.2. WPA to the Rescue!</a></li>
+<li><a href="#23-TKIP" title="2.3. TKIP">2.3. TKIP</a></li>
+<li><a href="#233-Michael-TKIP’s-MIC-Function" title="2.3.3. Michael: TKIP’s MIC Function">2.3.3. Michael: TKIP’s MIC Function</a></li>
+<li><a href="#234-A-Larger-IV-Space" title="2.3.4. A Larger IV Space">2.3.4. A Larger IV Space</a></li>
+<li><a href="#24-Key-Management-in-WPA" title="2.4. Key Management in WPA">2.4. Key Management in WPA</a></li>
+<li><a href="#25-Summary" title="2.5. Summary">2.5. Summary</a></li>
+</ul>
+</li>
+<li><a href="#3-WPA2" title="3. WPA2">3. WPA2</a><ul class="nav">
+<li><a href="#31-Introduction" title="3.1. Introduction">3.1. Introduction</a></li>
+<li><a href="#32-How-it-works" title="3.2. How it works?">3.2. How it works?</a></li>
+<li><a href="#33-Compare-with-WPA" title="3.3. Compare with WPA">3.3. Compare with WPA</a></li>
+<li><a href="#34-Disadvantages-of-WPA2" title="3.4. Disadvantages of WPA2">3.4. Disadvantages of WPA2</a></li>
+</ul>
+</li>
+<li><a href="#4-RSN" title="4. RSN">4. RSN</a><ul class="nav">
+<li><a href="#41-80211i-Foundation" title="4.1. 802.11i Foundation">4.1. 802.11i Foundation</a></li>
+<li><a href="#42-Robust-Security-Network-definition---RSN" title="4.2. Robust Security Network definition - RSN">4.2. Robust Security Network definition - RSN</a></li>
+<li><a href="#43-RSN-security-layers" title="4.3. RSN security layers">4.3. RSN security layers</a></li>
+</ul>
+</li>
+<li><a href="#5-SUMMARY" title="5. SUMMARY">5. SUMMARY</a></li>
+<li><a href="#6-REFERENCES" title="6. REFERENCES">6. REFERENCES</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
